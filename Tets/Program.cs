@@ -1,5 +1,7 @@
 ﻿using InputSimulatorStandard;
 using System;
+using System.Drawing;
+using System.Runtime.InteropServices;
 using System.Threading;
 
 
@@ -11,17 +13,50 @@ namespace Tets
     
         public static void Main(string[] args)
         {
-            Inputs cl = new Inputs();
-            InputSimulator input = new InputSimulator();
+            Xama xam = new Xama();
+
+            xam.Run();
+            //xam.RunTest();
+            /*
             while (true)
             {
-                if (Console.CapsLock)
-                {
-                    Console.WriteLine("ATIVO");
-                    cl.Click();
-                }
+                Console.WriteLine(GetCursorPosition().X +"X "+ GetCursorPosition().Y+"Y");
                 Thread.Sleep(1000);
             }
+            */
+
+
+
+        }
+
+        [StructLayout(LayoutKind.Sequential)]
+        public struct POINT
+        {
+            public int X;
+            public int Y;
+
+            public static implicit operator Point(POINT point)
+            {
+                return new Point(point.X, point.Y);
+            }
+        }
+
+        /// <summary>
+        /// Retrieves the cursor's position, in screen coordinates.
+        /// </summary>
+        /// <see>See MSDN documentation for further information.</see>
+        [DllImport("user32.dll")]
+        public static extern bool GetCursorPos(out POINT lpPoint);
+
+        public static Point GetCursorPosition()
+        {
+            POINT lpPoint;
+            GetCursorPos(out lpPoint);
+            // NOTE: If you need error handling
+            // bool success = GetCursorPos(out lpPoint);
+            // if (!success)
+
+            return lpPoint;
         }
     }
 }

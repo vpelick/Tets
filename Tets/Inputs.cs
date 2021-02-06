@@ -23,36 +23,52 @@ namespace Tets
 
         public void PressArrowLeftDown()
         {
-            input.Keyboard.KeyDown(VirtualKeyCode.LEFT);
-        }
+            while (true)
+            {
+                if (Console.CapsLock)
+                {
+                    input.Keyboard.KeyDown(VirtualKeyCode.LEFT);
+                    Thread.Sleep(10);
+                }
+            }
 
-        public void PressArrowLeftUp()
-        {
-            input.Keyboard.KeyUp(VirtualKeyCode.LEFT);
         }
 
 
         public void ContinuousDamage()
         {
-            PressArrowLeftDown();
-            while (Console.CapsLock)
+            double x = 0;
+            double y = 500*65535/899; ;
+            while (true)
             {
-                for (int  i= 900; i <= 1000; i++)
+                if (Console.CapsLock)
                 {
-                    input.Mouse.MoveMouseTo(i, 500);
-                    Thread.Sleep(10);
-                }
+                    for (int i = 700; i <= 1000; i=i+5)
+                    {
+                        x=i * 65535 / 1599;
 
-                for (int i = 1000; i >= 900; i--)
-                {
-                    input.Mouse.MoveMouseTo(i, 500);
-                    Thread.Sleep(10);
-                }
+                        input.Mouse.MoveMouseTo(x, y);
+                        
+                        Thread.Sleep(1);
+                    }
 
-                Thread.Sleep(20000);
+                    for (int i = 1000; i >= 700; i=i-5)
+                    {
+                        x = i * 65535 / 1599;
+                        input.Mouse.MoveMouseTo(x, y);
+                        Thread.Sleep(1);
+                    }
+
+                    Thread.Sleep(20000);
+                }
             }
-            //PressArrowLeftUp();
         }
 
+        public void PressKeyBoard(VirtualKeyCode vKey)
+        {
+            input.Keyboard.KeyDown(vKey);
+            Thread.Sleep(500);
+            input.Keyboard.KeyUp(vKey);
+        }
     }
 }
