@@ -28,7 +28,7 @@ namespace Tets
                 if (Console.CapsLock)
                 {
                     input.Keyboard.KeyDown(VirtualKeyCode.LEFT);
-                    Thread.Sleep(10);
+                    Thread.Sleep(50);
                 }
             }
 
@@ -61,6 +61,7 @@ namespace Tets
 
                     Thread.Sleep(20000);
                 }
+                Thread.Sleep(1000);
             }
         }
 

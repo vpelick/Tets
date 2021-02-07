@@ -56,6 +56,7 @@ namespace Tets
                     defCount++;
                     buffCount++;
                     speedCount++;
+                    stamPot++;
 
                     if (explosionCount==4)
                     {
@@ -102,7 +103,7 @@ namespace Tets
 
                     }
 
-                    Thread.Sleep(500);
+                    Thread.Sleep(1200);
 
                 }
                 else
@@ -124,6 +125,8 @@ namespace Tets
             {
                 input.Click();
                 Thread.Sleep(200);
+                input.Click();
+                Thread.Sleep(400);
             }
             input.PressKeyBoard(VirtualKeyCode.F2);
         }
@@ -135,6 +138,8 @@ namespace Tets
             {
                 input.Click();
                 Thread.Sleep(200);
+                input.Click();
+                Thread.Sleep(400);
             }
             input.PressKeyBoard(VirtualKeyCode.F2);
         }
@@ -146,6 +151,8 @@ namespace Tets
             {
                 input.Click();
                 Thread.Sleep(200);
+                input.Click();
+                Thread.Sleep(400);
             }
             input.PressKeyBoard(VirtualKeyCode.F2);
         }
@@ -157,6 +164,8 @@ namespace Tets
             {
                 input.Click();
                 Thread.Sleep(200);
+                input.Click();
+                Thread.Sleep(400);
             }
             input.PressKeyBoard(VirtualKeyCode.F2);
         }
