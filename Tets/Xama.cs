@@ -52,7 +52,7 @@ namespace Tets
                 if (Console.CapsLock)
                 {
                     input.Click();
-                    explosionCount++;
+                    //explosionCount++;
                     defCount++;
                     buffCount++;
                     speedCount++;
@@ -82,7 +82,7 @@ namespace Tets
                         speed();
                     }
 
-                    if (stamPot == 45)
+                    if (stamPot == 13)
                     {
                         stamPot = 0;
                         stamCount++;
@@ -90,7 +90,7 @@ namespace Tets
                         {
                             input.PressKeyBoard(VirtualKeyCode.VK_3);
                         }
-
+                        /*
                         if(stamCount > 99 && stamCount <= 198)
                         {
                             input.PressKeyBoard(VirtualKeyCode.VK_2);
@@ -100,6 +100,7 @@ namespace Tets
                         {
                             input.PressKeyBoard(VirtualKeyCode.VK_1);
                         }
+                        */
                     }
 
                     Thread.Sleep(1200);
