@@ -100,7 +100,6 @@ namespace Tets
                         {
                             input.PressKeyBoard(VirtualKeyCode.VK_1);
                         }
-
                     }
 
                     Thread.Sleep(1200);
