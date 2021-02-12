@@ -86,24 +86,29 @@ namespace Tets
                     {
                         stamPot = 0;
                         stamCount++;
-                        if (stamCount <= 99)
+                        if (stamCount <= 42)
                         {
                             input.PressKeyBoard(VirtualKeyCode.VK_3);
                         }
-                        /*
-                        if(stamCount > 99 && stamCount <= 198)
+                        
+                        if(stamCount > 42 && stamCount <= 84)
                         {
                             input.PressKeyBoard(VirtualKeyCode.VK_2);
                         }
 
-                        if (stamCount > 198 && stamCount  <= 297)
+                        if (stamCount > 84 && stamCount <= 126)
                         {
                             input.PressKeyBoard(VirtualKeyCode.VK_1);
                         }
-                        */
+
+                        if (stamCount ==126)
+                        {
+                            stamCount = 0;
+                        }
+
                     }
 
-                    Thread.Sleep(1200);
+                    Thread.Sleep(600);
 
                 }
                 else
