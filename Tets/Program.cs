@@ -13,17 +13,18 @@ namespace Tets
     
         public static void Main(string[] args)
         {
+
+            /*
             Xama xam = new Xama();
 
             xam.Run();
-            //xam.RunTest();
-            /*
-            while (true)
-            {
-                Console.WriteLine(GetCursorPosition().X +"X "+ GetCursorPosition().Y+"Y");
-                Thread.Sleep(1000);
-            }
+            *
+            *
             */
+            Mago mag = new Mago();
+
+            mag.Run();
+
 
 
 
