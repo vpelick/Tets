@@ -14,17 +14,21 @@ namespace Tets
         public static void Main(string[] args)
         {
 
-            /*
+            
             Xama xam = new Xama();
 
             xam.Run();
             *
             *
-            */
+            
+            /*
             Mago mag = new Mago();
 
             //mag.Run();
             mag.Run();
+            */
+            /////
+
 
         }
 
