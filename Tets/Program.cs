@@ -24,6 +24,7 @@ namespace Tets
             /*
             Mago mag = new Mago();
 
+            //mag.Run();
             mag.Run();
             */
             /////
