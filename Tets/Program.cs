@@ -15,17 +15,10 @@ namespace Tets
         {
 
             /*
-            Xama xam = new Xama();
 
-            xam.Run();
-            *
-            *
-            */
             Mago mag = new Mago();
 
             mag.Run();
-            */
-            /////
 
 
             Xama xam = new Xama();
